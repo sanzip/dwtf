@@ -1,5 +1,5 @@
 <?php
-$conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn");
+$conn = pg_connect("dbname=d2nip5a2dq6nrd");
 
 
 if (!$conn) {
