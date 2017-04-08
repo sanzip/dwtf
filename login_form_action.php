@@ -8,8 +8,8 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 		$password= $_POST['password'];
 	if (!empty($username)&&!empty($password)) {
 	$sql= "SELECT * FROM login WHERE email='$username' AND password='$password'";
-	$result= mysqli_query($conn, $sql);
-	$row = mysqli_fetch_array($result);
+	$result= pg_query($conn, $sql);
+	$row = pg_fetch_array($result);
 	if ($row>0) {
 		//echo"success";
 
@@ -24,7 +24,7 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 		//echo "Username or Password is invalid";
 		exit();
 	}
-	mysqli_close($conn); 
+	pg_close($conn); 
 
 	
 		//echo "Username or Password is invalid";
