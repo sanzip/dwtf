@@ -56,7 +56,7 @@
    </div>
     <div class="menuBar">
         <ul class="menu">
-          <li><a href="login.php">Logout</a></li>
+          <li><a href="index.php">Logout</a></li>
          
         </ul>
       </div>

@@ -20,7 +20,7 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	else
 	 {
 	 
-	 	header("location:login.php");
+	 	header("location:index.php");
 		//echo "Username or Password is invalid";
 		exit();
 	}

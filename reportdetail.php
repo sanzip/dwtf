@@ -23,7 +23,7 @@
           <li ><a > <?php 
       session_start();
       echo $_SESSION['login_user']?></a></li>
-          <li><a href="login.php">Logout</a></li>
+          <li><a href="index.php">Logout</a></li>
          
         </ul>
       </div>
