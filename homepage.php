@@ -13,8 +13,12 @@
   session_start();
 if(!isset($_SESSION['login_user'])){
    header("location:index.php");
+   exit();
 }
-
+if(isset($_SESSION['login_user'])){
+    header('location:homepage.php');
+    exit();
+}
   ?>
     <header class="main__header">
   <div class="container">
