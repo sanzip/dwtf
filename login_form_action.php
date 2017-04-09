@@ -9,11 +9,10 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	if (!empty($username)&&!empty($password)) {
 	$sql= "SELECT * FROM login WHERE email='$username' AND password='$password'";
 	$result= pg_query($conn, $sql);
-	$row = pg_fetch_array($result);
-	if (pg_num_rows($row) == 1 ) {
+	if (pg_num_rows($result) == 1 ) {
 		//echo"success";
 
-		$_SESSION['login_user']=$row['username']; // Initializing Session// Redirecting To Other Page
+		$_SESSION['login_user']=$row['email']; // Initializing Session// Redirecting To Other Page
 		header("location:homepage.php");
 	exit();
 	} 
