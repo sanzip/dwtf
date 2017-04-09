@@ -14,9 +14,7 @@
 if(!isset($_SESSION['login_user'])){
    header("location:index.php");
 }
-if(isset($_SESSION['login_user'])){
-    header('location:homepage.php');
-}
+
   ?>
     <header class="main__header">
   <div class="container">
