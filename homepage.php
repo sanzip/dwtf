@@ -9,7 +9,12 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  
+  <?php
+  session_start();
+if(!isset($_SESSION['login_user'])){
+   header("location:index.php");
+}
+  ?>
     <header class="main__header">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
@@ -40,7 +45,7 @@
 	<div class="row">
      <?php
         require('db_connection.php');
-    
+    header('Content-type: image/jpeg');
       $sql = "SELECT * from users";
       //$row = $result->fetch(PDO::FETCH_ASSOC)
       //$result = $db->query($sql);
