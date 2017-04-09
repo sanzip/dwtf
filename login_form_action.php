@@ -24,7 +24,7 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 		//echo "Username or Password is invalid";
 		exit();
 	}
-	pg_close($conn); 
+	
 
 	
 		//echo "Username or Password is invalid";
