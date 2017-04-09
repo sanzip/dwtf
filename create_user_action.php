@@ -21,8 +21,8 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
   $fellowship_place=$_POST['fplace'];
 	$photo=file_get_contents($photo);
 	$photo=base64_encode($photo);
-  //$qry = "insert into user(user_id, username, password, email, fellowship_place, batch, 'number', image) VALUES(:$userid, :$username, :$password, :$email, :$fellowship_place, :$batch,:$number,:$photo)";
-	$qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo')";
+  $qry = "insert into user(user_id, username, password, email, fellowship_place, batch, 'number', image) VALUES(:$userid, :$username, :$password, :$email, :$fellowship_place, :$batch,:$number,:$photo)";
+	//$qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo')";
    $result=pg_query($conn, $qry);
    
    if($result)
