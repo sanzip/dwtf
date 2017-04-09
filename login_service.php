@@ -4,7 +4,7 @@ include "DbConnection.php";
 
 $username=$_POST["username"];
 $password=$_POST["password"];
-$query="Select *from users where email='$username' AND password='$password'";
+$query="Select * from users where email='$username' AND password='$password'";
 $result = pg_query($conn, $query);
 $row = pg_fetch_assoc($result);
 if($row){
