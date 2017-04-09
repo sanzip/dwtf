@@ -88,6 +88,7 @@
 
             $i++;
     }
+    pg_close($conn);
       ?>
 	</div>
 </div>
