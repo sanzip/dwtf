@@ -41,7 +41,7 @@
      <?php
         require('db_connection.php');
     
-      $sql = "SELECT * from user";
+      $sql = "SELECT * from users";
       //$row = $result->fetch(PDO::FETCH_ASSOC)
       //$result = $db->query($sql);
       $result = pg_query($conn,$sql) ;

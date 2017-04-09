@@ -48,7 +48,7 @@ if(!isset($_SESSION['login_user'])){
 <?php
         require('db_connection.php');
     $report_id=str_replace("'", "", $_GET['id']);
-      $sql = "SELECT * from reports a inner join user b on a.user_id=b.user_id where report_id='$report_id'";
+      $sql = "SELECT * from reports a inner join users b on a.user_id=b.user_id where report_id='$report_id'";
       $result = pg_query($conn, $sql) ;
   $row = pg_fetch_array($result);
   if ($row>0) {
