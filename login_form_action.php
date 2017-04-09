@@ -10,7 +10,7 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	$sql= "SELECT * FROM login WHERE email='$username' AND password='$password'";
 	$result= pg_query($conn, $sql);
 	$row = pg_fetch_array($result);
-	if ($row==1) {
+	if (pg_num_rows($row) == 1 ) {
 		//echo"success";
 
 		$_SESSION['login_user']=$row['username']; // Initializing Session// Redirecting To Other Page
