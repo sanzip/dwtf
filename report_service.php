@@ -10,8 +10,9 @@ $Thours=$_POST["Thours"];
 
     $queryR="Insert into reports(date,title,body,class_taught,hours_taught) VALUES('$date','$title','$story','$classT','$Thours')";
     //$conn -> query($queryR);
-    $resultC = $conn -> query($queryR);
-    $rowC = mysqli_fetch_assoc($resultC);
+     $resultC = pg_query($conn, $queryR);
+   // $resultC = $conn -> query($queryR);
+    $rowC = pg_fetch_assoc($resultC);
     if($rowC){
         $data = Array("save" => "Your report saved successfully",'result'=>'success');
         echo json_encode($data);
