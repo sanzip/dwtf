@@ -45,7 +45,7 @@ if(!isset($_SESSION['login_user'])){
 	<div class="row">
      <?php
         require('db_connection.php');
-    header('Content-type: image/jpeg');
+    // header('Content-type: image/jpeg');
       $sql = "SELECT * from users";
       //$row = $result->fetch(PDO::FETCH_ASSOC)
       //$result = $db->query($sql);
