@@ -1,10 +1,7 @@
 <?php
 
 	require_once 'db_connection.php';
-  session_start();
-if(!isset($_SESSION['login_user'])){
-   header("Location:index.php");
-}
+
 
 if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	{
