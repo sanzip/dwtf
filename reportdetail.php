@@ -9,6 +9,12 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+   <?php
+  session_start();
+if(!isset($_SESSION['login_user'])){
+   header("location:index.php");
+}
+  ?>
     <header class="main__header">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
@@ -43,8 +49,8 @@
         require('db_connection.php');
     $report_id=str_replace("'", "", $_GET['id']);
       $sql = "SELECT * from reports a inner join user b on a.user_id=b.user_id where report_id='$report_id'";
-      $result = mysqli_query($conn, $sql) ;
-  $row = mysqli_fetch_array($result);
+      $result = pg_query($conn, $sql) ;
+  $row = pg_fetch_array($result);
   if ($row>0) {
        
         

@@ -44,7 +44,12 @@
 </style>
 </head>
 <body>
-
+ <?php
+  session_start();
+if(!isset($_SESSION['login_user'])){
+   header("location:index.php");
+}
+  ?>
       <header class="main__header">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
@@ -74,11 +79,11 @@
         require('db_connection.php');
     $user_id=$_POST['id'];
       $sql = "SELECT * from reports a inner join user b  on a.user_id=b.user_id where a.user_id='$user_id'";
-      $result = mysqli_query($conn,$sql) ;
-    if (mysqli_num_rows($result) > 0){
+      $result =pg_query($conn,$sql) ;
+    if (pg_num_rows($result) > 0){
         $data = array();
         $i = 0;
-        while($res = mysqli_fetch_assoc($result))
+        while($res = pg_fetch_assoc($result))
         {
             $data[$i]['report_id'] = $res["report_id"];
             $data[$i]['user_id'] = $res["user_id"];

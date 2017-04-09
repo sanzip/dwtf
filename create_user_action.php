@@ -1,8 +1,10 @@
 <?php
 
-
-	
 	require_once 'db_connection.php';
+  session_start();
+if(!isset($_SESSION['login_user'])){
+   header("Location:index.php");
+}
 
 if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	{
@@ -23,7 +25,7 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	$photo=file_get_contents($photo);
 	$photo=base64_encode($photo);
 	$qry="insert into user(user_id,username,password,email,fellowship_place,batch,number,image) values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo')";
-   $result=mysqli_query($conn,$qry);
+   $result=pg_query($conn,$qry);
    
    if($result)
    {
@@ -36,7 +38,7 @@ exit();
     echo "<br/> Image not upload";
    }
    }
-mysqli_close($conn);
+pg_close($conn);
 		}
 		
 		

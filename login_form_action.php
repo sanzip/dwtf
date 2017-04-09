@@ -29,6 +29,9 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	
 		//echo "Username or Password is invalid";
 	}
+	else{
+		header("location:index.php");
+	}
 	}
 
 

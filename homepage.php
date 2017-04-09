@@ -9,6 +9,12 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+   <?php
+  session_start();
+if(!isset($_SESSION['login_user'])){
+   header("location:index.php");
+}
+  ?>
     <header class="main__header">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
@@ -41,11 +47,13 @@
         require('db_connection.php');
     
       $sql = "SELECT * from user";
-      $result = mysqli_query($conn,$sql) ;
-    if (mysqli_num_rows($result) > 0){
+      //$row = $result->fetch(PDO::FETCH_ASSOC)
+      //$result = $db->query($sql);
+      $result = pg_query($conn,$sql) ;
+    if (pg_num_rows($result) > 0){
         $data = array();
         $i = 0;
-        while($res = mysqli_fetch_assoc($result))
+        while($res = pg_fetch_assoc($result))
         {
             $data[$i]['user_id'] = $res["user_id"];
             $data[$i]['username'] = $res["username"];
