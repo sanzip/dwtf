@@ -2,9 +2,9 @@
 
 include "DbConnection.php";
 
-$username=$_GET["username"];
-$password=$_GET["password"];
-$query="Select username,email,batch,fellowship_place,number from users where email='$username' AND password='$password'";
+$username=$_POST["username"];
+$password=$_POST["password"];
+$query="select username,email,batch,fellowship_place,number from users where email='$username' AND password='$password'";
 $result = pg_query($conn, $query);
 $row = pg_fetch_assoc($result);
 if($row){
