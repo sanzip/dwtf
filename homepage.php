@@ -9,12 +9,7 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-   <?php
-  session_start();
-if(!isset($_SESSION['login_user'])){
-   header("location:index.php");
-}
-  ?>
+  
     <header class="main__header">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
