@@ -72,7 +72,7 @@ if(!isset($_SESSION['login_user'])){
 
                 </div>
                 <div class="avatar">
-                  <?php echo '<img src="data:image/jpeg;base64,' . $data[$i]['image']. ' "   />';?>
+                  <?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($data[$i]['image']). ' "   />';?>
                 </div>
                 <div class="info">
                     <div class="title">
