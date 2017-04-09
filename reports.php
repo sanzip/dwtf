@@ -107,7 +107,7 @@ if(!isset($_SESSION['login_user'])){
 
                 </div> -->
                       <div class="avatar">
-                      <?php echo '<img src="data:image/jpeg;base64,'. $data[$i]['image']. ' " />';?> 
+                      <?php echo '<img src="data:image/jpeg;base64,'. pg_unescape_bytea($data[$i]['image']). ' " />';?> 
                         <!-- <img src="http://placehold.it/200x100" alt="..."> -->
                    </div>
                  </div>
