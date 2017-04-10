@@ -10,7 +10,7 @@ $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip
 
     $queryR="insert into reports(report_id,user_id,date,title,body,class_taught,hours_taught) VALUES(1,'$user_id','$date','$title','$story','$classT','$Thours')";
     //$conn -> query($queryR);
-     $resultC = pg_query($conn, $queryR);
+     $resultC = pg_query($queryR);
    // $resultC = $conn -> query($queryR);
     $rowC = pg_fetch_assoc($resultC);
     if($rowC){

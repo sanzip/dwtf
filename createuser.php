@@ -52,7 +52,7 @@ if(!isset($_SESSION['login_user'])){
            
                     <fieldset>
                        <div class="form-group">
-                  <input class="form-control" placeholder="UserId" name="userid" type="text" required>
+                  <input class="form-control" placeholder="UserId" name="userid" type="text" >
               </div>
                 <div class="form-group">
                   <input class="form-control" placeholder="E-mail" name="email" type="text" required>
