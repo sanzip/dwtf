@@ -28,7 +28,10 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    
    if($result)
    {
-   echo "<br/> Image upload";
+   //echo "<br/> Image upload";
+   echo "<script type='text/javascript'>
+   $.notify("Access granted", "success");
+   </script>";
  // header("Location:http://localhost:81/procedure_method/Admin/home_layout.php"); /* Redirect browser */
 exit();
    }
