@@ -30,6 +30,7 @@ if(!isset($_SESSION['login_user'])){
       session_start();
       echo $_SESSION['login_user']?></a></li>
           <li><a href="index.php">Logout</a></li>
+		  <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
          
         </ul>
       </div>
@@ -96,6 +97,63 @@ if(!isset($_SESSION['login_user'])){
     pg_close($conn);
       ?>
 	</div>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Modal header</h3>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+    <div class="row vertical-offset-100">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Create User</h3>
+        </div>
+          <div class="panel-body">
+            <form action="create_user_action.php" enctype="multipart/form-data" method="post">
+           
+                    <fieldset>
+                       <div class="form-group">
+                  <input class="form-control" placeholder="UserId" name="userid" type="text">
+              </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="E-mail" name="email" type="text">
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+              </div>
+               <div class="form-group">
+                  <input class="form-control" placeholder="Username" name="username" type="text">
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Batch" name="batch" type="text" value="">
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Contact Number" name="number" type="tel" value="">
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" value="">
+              </div>
+              <div class="form-group">
+                
+                 <input placeholder="Photo" type="file" name="photo" class="form-control">
+                   </div>
+              <input class="btn btn-success btn-block" name="btn_create" type="submit" value="Create">
+            </fieldset>
+              </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary">Save changes</button>
+    </div>
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
