@@ -32,7 +32,7 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    echo "<script type='text/javascript'>
    alert('User Created!');
 </script>";
- // header("Location:http://localhost:81/procedure_method/Admin/home_layout.php"); /* Redirect browser */
+ header("location:createuser.php"); /* Redirect browser */
 exit();
    }
    else
@@ -40,6 +40,7 @@ exit();
    "<script type='text/javascript'>
    alert('Error in Creating User');
 </script>";
+header("location:createuser.php"); /* Redirect browser */
    }
    }
 pg_close($conn);
