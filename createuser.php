@@ -52,29 +52,29 @@ if(!isset($_SESSION['login_user'])){
            
                     <fieldset>
                        <div class="form-group">
-                  <input class="form-control" placeholder="UserId" name="userid" type="text">
+                  <input class="form-control" placeholder="UserId" name="userid" type="text" required>
               </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="E-mail" name="email" type="text">
+                  <input class="form-control" placeholder="E-mail" name="email" type="text" required>
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                <input class="form-control" placeholder="Password" name="password" type="password" required value="">
               </div>
                <div class="form-group">
-                  <input class="form-control" placeholder="Username" name="username" type="text">
+                  <input class="form-control" placeholder="Username" name="username" type="text" required>
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Batch" name="batch" type="text" value="">
+                <input class="form-control" placeholder="Batch" name="batch" type="text" value="" required>
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Contact Number" name="number" type="tel" value="">
+                <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" value="">
+                <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="">
               </div>
               <div class="form-group">
                 
-                 <input placeholder="Photo" type="file" name="photo" class="form-control">
+                 <input placeholder="Photo" type="file" name="photo" class="form-control" required>
                    </div>
               <input class="btn btn-success btn-block" name="btn_create" type="submit" value="Create">
             </fieldset>
