@@ -30,14 +30,16 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    {
    //echo "<br/> Image upload";
    echo "<script type='text/javascript'>
-   $.notify("Access granted", "success");
-   </script>";
+   alert('User Created!');
+</script>";
  // header("Location:http://localhost:81/procedure_method/Admin/home_layout.php"); /* Redirect browser */
 exit();
    }
    else
    {
-    echo "<br/> Image not upload";
+   "<script type='text/javascript'>
+   alert('Error in Creating User');
+</script>";
    }
    }
 pg_close($conn);
