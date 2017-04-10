@@ -30,7 +30,7 @@ if(!isset($_SESSION['login_user'])){
       session_start();
       echo $_SESSION['login_user']?></a></li>
           <li><a href="index.php">Logout</a></li>
-         
+         <li><a  href="createuser.php" class="btn btn-primary">Create User</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
