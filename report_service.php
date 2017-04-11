@@ -13,7 +13,7 @@ $user_id=$_POST["user_id"];
      $resultC = pg_query($queryR);
    // $resultC = $conn -> query($queryR);
     $rowC = pg_fetch_assoc($resultC);
-    if($rowC>0){
+    if($resultC){
         $data = Array("save" => "Your report saved successfully",'result'=>'success');
         echo json_encode($data);
     }else{
