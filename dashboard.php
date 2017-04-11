@@ -29,11 +29,11 @@ if(!isset($_SESSION['login_user'])){
     <div class="menuBar">
         <ul class="menu">
           
-             <li class="dropdown"><a href="#"> <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-            <ul>
+             <li class="dropdown"><a href="index.php">Logout</span></a>
+           <!--  <ul>
               <li><a href="index.php">Logout</a></li>
              
-            </ul>
+            </ul> -->
           </li>
         </ul>
       </div>
@@ -41,10 +41,7 @@ if(!isset($_SESSION['login_user'])){
     </nav>
   </div>
 </header>
-<br>
-<br>
-<br>
-<br>
+<section class="slider">
 <div class="container">
 <div class="row text-center pad-top">
                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -71,6 +68,7 @@ if(!isset($_SESSION['login_user'])){
 
               </div>
 			  </div>
+      </section>
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
