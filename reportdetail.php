@@ -60,17 +60,15 @@ if(!isset($_SESSION['login_user'])){
             <div class="container">
                
                 
-                        <h1 style="text-align:center"class=""><?php echo  $row['title']?></h1>
+                        <h3 style="text-align:center"class=""><?php echo  $row['title']?></h3>
                      
-                        <p class=""><?php echo   $row['username']?></p>
-                        <p class=""><?php echo   $row['date']?></p>
+                        <h5 class="">BY:<?php echo   $row['username']?></h5>
+                        <h5 class="">DATE:<?php echo   $row['date']?></h5>
                   
                     <div>
                  <p class=""><?php echo   $row['body']?></p>
                     </div>
-                </li>
-            
-            </ul>
+             
         </div>
 		</div>
         <?php
