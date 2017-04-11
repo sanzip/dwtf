@@ -29,13 +29,12 @@ if(!isset($_SESSION['login_user'])){
     <div class="menuBar">
         <ul class="menu">
           
-             <li class="dropdown"><a href="#">Setting</a>
+             <li class="dropdown"><a href="#"> <span class="glyphicon glyphicon-triangle-bottom"></span></a>
             <ul>
-              <li><a href="index.php">Product 1</a></li>
+              <li><a href="index.php">Logout</a></li>
              
             </ul>
           </li>
-         <li><a  href="createuser.php" class="btn btn-primary">Create User</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
