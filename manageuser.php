@@ -46,13 +46,12 @@ if(!isset($_SESSION['login_user'])){
          
         </ul>
       </div>
-      <!-- /.navbar-collapse --> 
     </nav>
   </div>
 </header>
 <br>
 <br>
-<div class="container">
+
 <table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
 <thead>
  <tr>
@@ -97,7 +96,7 @@ if(!isset($_SESSION['login_user'])){
                                               
                                             </tbody>
                                           </table>
-                                        </div>
+                                     
                                      
 
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
