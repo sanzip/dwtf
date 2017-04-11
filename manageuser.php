@@ -41,7 +41,7 @@ if(!isset($_SESSION['login_user'])){
         <ul class="menu">
           <li ><a > <?php 
       session_start();
-      // echo $_SESSION['login_user']?></a></li>
+    ?></a></li>
           <li><a href="index.php">Logout</a></li>
          
         </ul>
@@ -50,9 +50,6 @@ if(!isset($_SESSION['login_user'])){
     </nav>
   </div>
 </header>
-<br>
-<br>
-<br>
 <br>
 <br>
 <div class="container">
