@@ -41,7 +41,7 @@
 <div class="row text-center pad-top">
                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                       <div class="div-square">
-                           <a href="blank.html" >
+                           <a href="createuser.php" >
  <i class="fa fa-user fa-5x"></i>
                       <h4>Create User</h4>
                       </a>
@@ -52,7 +52,7 @@
                      
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">	
                       <div class="div-square">
-                           <a href="blank.html" >
+                           <a href="homepage.php" >
  <i class="fa fa-users fa-5x"></i>
                       <h4>View Users Details</h4>
                       </a>
