@@ -77,7 +77,7 @@ if(!isset($_SESSION['login_user'])){
     <div class="row">
         <?php
         require('db_connection.php');
-      $sql = "SELECT * from reports a inner join users b  on a.user_id=b.user_id";
+      $sql = "SELECT * from reports a inner join users b  on a.user_id=b.user_id ORDER BY date DESC ";
       $result =pg_query($conn,$sql) ;
     if (pg_num_rows($result) > 0){
         $data = array();

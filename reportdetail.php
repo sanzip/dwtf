@@ -26,9 +26,6 @@ if(!isset($_SESSION['login_user'])){
    </div>
     <div class="menuBar">
         <ul class="menu">
-          <li ><a > <?php 
-      session_start();
-      echo $_SESSION['login_user']?></a></li>
           <li><a href="index.php">Logout</a></li>
          
         </ul>
