@@ -10,6 +10,12 @@
 <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
+   <?php
+  session_start();
+if(!isset($_SESSION['login_user'])){
+   header("location:index.php");
+}
+  ?>
 
     <header class="main__header">
   <div class="container">
