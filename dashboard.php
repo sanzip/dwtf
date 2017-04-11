@@ -39,44 +39,22 @@
 <br>
 <div class="container">
 <div class="row text-center pad-top">
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                      <div class="div-square">
-                           <a href="blank.html" >
- <i class="fa fa-circle-o-notch fa-5x"></i>
-                      <h4>Check Data</h4>
-                      </a>
-                      </div>
-                     
-                     
-                  </div> 
-                 
                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                       <div class="div-square">
                            <a href="blank.html" >
  <i class="fa fa-user fa-5x"></i>
-                      <h4>Register User</h4>
+                      <h4>Create User</h4>
                       </a>
                       </div>
                      
                      
                   </div> 
                      
-           
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                      <div class="div-square">
-                           <a href="blank.html" >
- <i class="fa fa-lightbulb-o fa-5x"></i>
-                      <h4>New Issues</h4>
-                      </a>
-                      </div>
-                     
-                     
-                  </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">	
                       <div class="div-square">
                            <a href="blank.html" >
  <i class="fa fa-users fa-5x"></i>
-                      <h4>See Users</h4>
+                      <h4>View Users Details</h4>
                       </a>
                       </div>
                      
