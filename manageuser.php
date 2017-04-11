@@ -23,7 +23,7 @@ $(document).ready(function() {
   
 }
 .row{
-  padding:0px;
+  padding:5px;
 }</style>
 </head>
 <body>
@@ -52,6 +52,8 @@ if(!isset($_SESSION['login_user'])){
     </nav>
   </div>
 </header>
+<br>
+<br>
 <br>
 <br>
 <div class="container">
