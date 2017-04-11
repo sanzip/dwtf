@@ -50,7 +50,7 @@ if(!isset($_SESSION['login_user'])){
 <br>
 <br>
 <br>
-<section class="slider">
+<section>
 <div class="container">
 <table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
 <thead>
@@ -78,7 +78,9 @@ if(!isset($_SESSION['login_user'])){
         ?>
         <tr>
           <td><?php echo $row['user_id']; ?></td> 
-          <td class="banner"><?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']).  ' "   />';?></td>;
+          <td class="banner"> <div class="avatar">
+                  <?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']). ' "   />';?>
+                </div></td>;
           <td><?php echo $row['email']; ?></td> 
           <td><?php echo $row['username']; ?></td> 
           <td><?php echo $row['batch']; ?></td> 
