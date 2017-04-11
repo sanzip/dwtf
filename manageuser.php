@@ -1,9 +1,10 @@
 <html>
 <title></title>
 <head>
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/notify.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<!-- <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'> -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/dwtf.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -30,8 +31,6 @@ if(!isset($_SESSION['login_user'])){
     <header class="main__header">
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
-      <!-- Brand and toggle get grouped for better mobile display --> 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="navbar-header">
        <h1 class="navbar-brand"><a >Deerwalk Teaching Fellowship(DWTF)</a></h1>
      
@@ -54,7 +53,6 @@ if(!isset($_SESSION['login_user'])){
 <br>
 <br>
 <br>
-<section>
 <div class="container">
 <table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
 <thead>
@@ -101,11 +99,8 @@ if(!isset($_SESSION['login_user'])){
                                             </tbody>
                                           </table>
                                         </div>
-                                      </section>
-<script type="text/javascript" src="js/jquery.min.js"></script> 
-<script type="text/javascript" src="js/notify.js"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.min.js"></script> 
+                                     
+
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
 
