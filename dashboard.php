@@ -23,7 +23,7 @@ if(!isset($_SESSION['login_user'])){
       <!-- Brand and toggle get grouped for better mobile display --> 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="navbar-header">
-        <h1 class="navbar-brand"><a >Deerwalk Teaching Fellowship(DWTF)</a></h1>
+        <h1 class="navbar-brand"><a href="dashboard.php">Deerwalk Teaching Fellowship(DWTF)</a></h1>
      
    </div>
     <div class="menuBar">
@@ -60,6 +60,28 @@ if(!isset($_SESSION['login_user'])){
                            <a href="homepage.php" >
  <i class="fa fa-users fa-5x"></i>
                       <h4>View Users Details</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div>
+                  <div class="row text-center pad-top">
+                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <div class="div-square">
+                           <a href="manageuser.php" >
+ <i class="fa fa-user fa-5x"></i>
+                      <h4>Manage User</h4>
+                      </a>
+                      </div>
+                     
+                     
+                  </div> 
+                     
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> 
+                      <div class="div-square">
+                           <a href="allreports.php" >
+ <i class="fa fa-users fa-5x"></i>
+                      <h4>View All reports</h4>
                       </a>
                       </div>
                      

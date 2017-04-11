@@ -21,16 +21,13 @@ if(!isset($_SESSION['login_user'])){
       <!-- Brand and toggle get grouped for better mobile display --> 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="navbar-header">
-        <h1 class="navbar-brand"><a >Deerwalk Teaching Fellowship(DWTF)</a></h1>
+        <h1 class="navbar-brand"><a href="dashboard.php">Deerwalk Teaching Fellowship(DWTF)</a></h1>
      
    </div>
     <div class="menuBar">
         <ul class="menu">
-          <li ><a > <?php 
-      session_start();
-      echo $_SESSION['login_user']?></a></li>
           <li><a href="index.php">Logout</a></li>
-         <li><a  href="createuser.php" class="btn btn-primary">Create User</a></li>
+         <!-- <li><a  href="createuser.php" class="btn btn-primary">Create User</a></li> -->
         </ul>
       </div>
       <!-- /.navbar-collapse --> 

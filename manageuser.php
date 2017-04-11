@@ -56,9 +56,10 @@ if(!isset($_SESSION['login_user'])){
 <br>
 <br>
 <br>
+<br>
 <div class="container">
 <table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
-<thead>
+<thead style="color:#36d7b7">
  <tr>
 <th>UserId</th>
 <th>Image</th>
