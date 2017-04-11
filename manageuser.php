@@ -37,7 +37,7 @@ if(!isset($_SESSION['login_user'])){
   <div class="container">
     <nav class="navbar navbar-default" role="navigation"> 
       <div class="navbar-header">
-       <h1 class="navbar-brand"><a href="dashboard.php">Deerwalk Teaching Fellowship(DWTF)</a></h1>
+       <h1 class="navbar-brand"><i class="fa fa-graduation-cap fa-2x"></i><a href="dashboard.php">Deerwalk Teaching Fellowship(DWTF)</a></h1>
      
    </div>
     <div class="menuBar">

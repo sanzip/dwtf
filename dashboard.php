@@ -23,7 +23,7 @@ if(!isset($_SESSION['login_user'])){
       <!-- Brand and toggle get grouped for better mobile display --> 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="navbar-header">
-        <h1 class="navbar-brand"><a href="dashboard.php">Deerwalk Teaching Fellowship(DWTF)</a></h1>
+        <h1 class="navbar-brand"><i class="fa fa-graduation-cap fa-2x"></i><a href="dashboard.php">Deerwalk Teaching Fellowship(DWTF)</a></h1>
      
    </div>
     <div class="menuBar">
