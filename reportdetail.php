@@ -62,11 +62,11 @@ if(!isset($_SESSION['login_user'])){
                 
                         <h3 style="text-align:center"><?php echo  $row['title']?></h3>
                      
-                        BY:<h6><?php echo   $row['username']?></h6>
-                       DATE:<h6><?php echo   $row['date']?></h6>
+                        <h6>BY:<?php echo   $row['username']?></h6>
+                       <h6>DATE:<?php echo   $row['date']?></h6>
                   
                     <div>
-                 <p class=""><?php echo   $row['body']?></p>
+                 <p style="font-size:20px"><?php echo   $row['body']?></p>
                     </div>
              
         </div>
