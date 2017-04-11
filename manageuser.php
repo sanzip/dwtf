@@ -78,7 +78,7 @@ if(!isset($_SESSION['login_user'])){
         ?>
         <tr>
           <td><?php echo $row['user_id']; ?></td> 
-          <td class="banner"> <div class="avatar">
+          <td class="avatar"> <div class="avatar">
                   <?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']). ' "   />';?>
                 </div></td>;
           <td><?php echo $row['email']; ?></td> 
