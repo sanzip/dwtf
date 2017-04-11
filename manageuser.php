@@ -52,21 +52,21 @@ if(!isset($_SESSION['login_user'])){
 <br>
 <section class="slider">
 <div class="container">
-                                          <table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                                            <thead>
-                                              <tr>
-                                                <th>UserId</th>
-                                                 <th>Image</th>
-                                                <th>E-mail</th>
-                                                <th>Username</th>
-                                                <th>Batch</th>
-                                                 <th>Contact</th>
-                                                  <th>Fellowship place</th>
-
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              <?php
+<table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<thead>
+ <tr>
+<th>UserId</th>
+<th>Image</th>
+<th>E-mail</th>
+<th>Username</th>
+<th>Batch</th>
+<th>Contact</th>
+<th>Fellowship place</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+     <?php
                       
         //global $conn;
        require('db_connection.php');
@@ -78,7 +78,7 @@ if(!isset($_SESSION['login_user'])){
         ?>
         <tr>
           <td><?php echo $row['user_id']; ?></td> 
-          <td class="banner"><?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($data[$i]['image']).  ' "   />';?></td>;
+          <td class="banner"><?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']).  ' "   />';?></td>;
           <td><?php echo $row['email']; ?></td> 
           <td><?php echo $row['username']; ?></td> 
           <td><?php echo $row['batch']; ?></td> 
