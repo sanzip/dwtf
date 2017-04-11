@@ -57,11 +57,11 @@ if(!isset($_SESSION['login_user'])){
             <div class="container">
                
                 
-                        <h3 style="text-align:center"><?php echo  $row['title']?></h3>
-                     <ul>
-                     <li>   <h6><i class="fa fa-user "></i>&nbsp;&nbsp;<?php echo   $row['username']?></h6></li>
-                      <li>  <h6><i class="fa fa-clock-o "></i>&nbsp;&nbsp;<?php echo   $row['date']?></h6></li>
-                  <ul>
+                        <h3 style="text-align:center;font-weight:bold;font-size:32;color:#36d7b7"><?php echo  $row['title']?></h3>
+                     <ul style="list-style:none;text-align:center">
+                     <li>   <h6 style="font-size:15px"><i class="fa fa-user fa-2x"></i>&nbsp;&nbsp;<?php echo   $row['username']?></h6></li>
+                      <li>  <h6 style="font-size:15px"><i class="fa fa-clock-o fa-2x"></i>&nbsp;&nbsp;<?php echo   $row['date']?></h6></li>
+                  </ul>
                     <div>
                  <p style="font-size:20px"><?php echo   $row['body']?></p>
                     </div>
