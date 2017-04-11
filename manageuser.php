@@ -7,10 +7,8 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/dwtf.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
-<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
-
 <link href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" type="text/css" />
+
 <script>
 $(document).ready(function() {
     $('#users').DataTable();
@@ -51,6 +49,7 @@ if(!isset($_SESSION['login_user'])){
     </nav>
   </div>
 </header>
+<br>
 <br>
 <br>
 <br>
@@ -107,5 +106,8 @@ if(!isset($_SESSION['login_user'])){
 <script type="text/javascript" src="js/notify.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.min.js"></script> 
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+
 </body>
 </html>
