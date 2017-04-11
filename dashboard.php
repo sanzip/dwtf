@@ -28,10 +28,13 @@ if(!isset($_SESSION['login_user'])){
    </div>
     <div class="menuBar">
         <ul class="menu">
-          <li ><a > 
-    
-     
-          <li><a href="index.php">Logout</a></li>
+          
+             <li class="dropdown"><a href="#">Setting</a>
+            <ul>
+              <li><a href="index.php">Product 1</a></li>
+             
+            </ul>
+          </li>
          <li><a  href="createuser.php" class="btn btn-primary">Create User</a></li>
         </ul>
       </div>
