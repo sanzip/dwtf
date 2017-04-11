@@ -7,7 +7,7 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/dwtf.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<!-- <link href="css/style.css" rel="stylesheet"> -->
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
 <link href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" type="text/css" />
@@ -51,7 +51,7 @@ if(!isset($_SESSION['login_user'])){
 </header>
 <br>
 <br>
-
+<div class="container">
 <table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
 <thead>
  <tr>
@@ -96,7 +96,7 @@ if(!isset($_SESSION['login_user'])){
                                               
                                             </tbody>
                                           </table>
-                                     
+                                        </div>
                                      
 
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
