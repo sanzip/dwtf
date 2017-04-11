@@ -80,7 +80,7 @@ if(!isset($_SESSION['login_user'])){
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> 
                       <div class="div-square">
                            <a href="allreports.php" >
- <i class="fa fa-users fa-5x"></i>
+ <i class="fa fa-file-word-o fa-5x"></i>
                       <h4>View All reports</h4>
                       </a>
                       </div>
