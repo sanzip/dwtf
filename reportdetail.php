@@ -57,7 +57,7 @@ if(!isset($_SESSION['login_user'])){
         
       ?>
         <div class="col-md-12 col-lg-12">
-            
+            <div class="container">
                
                 
                         <h1 style="text-align:center"class=""><?php echo  $row['title']?></h1>
@@ -72,6 +72,7 @@ if(!isset($_SESSION['login_user'])){
             
             </ul>
         </div>
+		</div>
         <?php
       }
 ?>
