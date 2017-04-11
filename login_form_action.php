@@ -13,7 +13,7 @@ if(isset($_POST['btn_login']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 		//echo"success";
 
 		$_SESSION['login_user']='Admin'; // Initializing Session// Redirecting To Other Page
-		header("location:homepage.php");
+		header("location:dashboard.php");
 	exit();
 	} 
 	else
