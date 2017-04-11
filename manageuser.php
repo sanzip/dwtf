@@ -46,6 +46,11 @@ if(!isset($_SESSION['login_user'])){
     </nav>
   </div>
 </header>
+<br>
+<br>
+<br>
+<br>
+<section class="slider">
 <div class="container">
                                           <table id="users" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                             <thead>
@@ -79,7 +84,7 @@ if(!isset($_SESSION['login_user'])){
           <td><?php echo $row['batch']; ?></td> 
           <td><?php echo $row['number']; ?></td> 
            <td><?php echo $row['fellowship_place']; ?></td> 
-          <td><button onclick="postBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-primary">Post</button><button name="bpost" onclick="deleteBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-danger">Delete</button></td> 
+          <td><button onclick="postBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-success">Edit</button><button name="bpost" onclick="deleteBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-danger">Delete</button></td> 
           </tr>
           <?php
 }
@@ -91,6 +96,7 @@ if(!isset($_SESSION['login_user'])){
                                             </tbody>
                                           </table>
                                         </div>
+                                      </section>
 <script type="text/javascript" src="js/jquery.min.js"></script> 
 <script type="text/javascript" src="js/notify.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
