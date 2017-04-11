@@ -11,7 +11,7 @@ $user_id=$_GET["user_id"];
     //$conn -> query($queryR);
      $resultC = pg_query($queryR);
    // $resultC = $conn -> query($queryR);
-    $rowC = pg_fetch_assoc($resultC);
+    $rowC = pg_fetch_array($resultC);
     if($rowC){
         $data = Array("save" => "Your report saved successfully",'result'=>'success');
         echo json_encode($data);
