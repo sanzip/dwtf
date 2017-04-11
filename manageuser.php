@@ -16,6 +16,11 @@ $(document).ready(function() {
     $('#users').DataTable();
 });
 </script>
+<style type="text/css">
+.image img{
+  height:100px;
+  
+}</style>
 </head>
 <body>
    <?php
@@ -78,9 +83,8 @@ if(!isset($_SESSION['login_user'])){
         ?>
         <tr>
           <td><?php echo $row['user_id']; ?></td> 
-          <td class="avatar"> <div class="avatar">
-                  <?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']). ' "   />';?>
-                </div></td>;
+          <td class="image"> 
+          <?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']). ' "   />';?></td>;
           <td><?php echo $row['email']; ?></td> 
           <td><?php echo $row['username']; ?></td> 
           <td><?php echo $row['batch']; ?></td> 
