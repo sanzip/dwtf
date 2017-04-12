@@ -19,7 +19,7 @@ $(document).ready(function() {
 function deleteUser(id){
 	alert(id);
 	$.ajax({
-      url: 'http://localhost:81/procedure_method/Admin/services.php?action=deleteuser&id='+id,
+      url: 'https://fellowship-deerwalk.herokuapp.com/services.php?action=deleteuser&id='+id,
     type: 'POST',
       success: function(data) {
 		  alert("success");
