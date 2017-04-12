@@ -16,6 +16,21 @@
 $(document).ready(function() {
     $('#users').DataTable();
 });
+function deleteUser(id){
+	alert(id);
+	$.ajax({
+      url: 'http://localhost:81/procedure_method/Admin/services.php?action=deleteuser&id='+id,
+    type: 'POST',
+      success: function(data) {
+		  alert("success");
+      },
+	     error: function() {
+         alert("error");
+      },
+     
+   });
+	
+};
 </script>
 <style type="text/css">
 .image img{
@@ -91,7 +106,7 @@ if(!isset($_SESSION['login_user'])){
           <td><?php echo $row['batch']; ?></td> 
           <td><?php echo $row['number']; ?></td> 
            <td><?php echo $row['fellowship_place']; ?></td> 
-          <td><button onclick="postBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-success">Edit</button><button name="bpost" onclick="deleteBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-danger">Delete</button></td> 
+          <td><button onclick="postBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-success">Edit</button><button name="bpost" onclick="deleteUser(<?php echo $row['user_id']; ?>);" class="btn btn-danger">Delete</button></td> 
           </tr>
           <?php
 }
