@@ -41,8 +41,7 @@ if(!isset($_SESSION['login_user'])){
 <br>
 <br>
 <br>
-<br>
-<br>
+
 <?php
         require('db_connection.php');
     $report_id=str_replace("'", "", $_GET['id']);

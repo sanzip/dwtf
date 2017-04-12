@@ -40,6 +40,8 @@ if(!isset($_SESSION['login_user'])){
 <br>
 <br>
 <br>
+<br>
+<br>
    <div class="container">
     <div class="row vertical-offset-100">
       <div class="col-xs-6 col-md-4 col-md-offset-4">
