@@ -5,17 +5,17 @@ $queryR="select * from reports where user_id='$user_id'";
     //$conn -> query($queryR);
      $resultC = pg_query($queryR);
    // $resultC = $conn -> query($queryR);user_id,title,body,date,class_taught,hours_taught
-      $data=array();
+      $data=Array();
    while( $row = pg_fetch_assoc($resultC)){
 
     
-		 $data[] = array("result"=>"success","message" => "success","title"=>$row["title"],"body"=>$row["body"],"date"=>$row["date"],"class_taught"=>$row["class_taught"],"hours_taught"=>$row["hours_taught"]);
+		 $data[] = Array("result"=>"success","message" => "success","title"=>$row["title"],"body"=>$row["body"],"date"=>$row["date"],"class_taught"=>$row["class_taught"],"hours_taught"=>$row["hours_taught"]);
     
        
     }
  echo json_encode($data);
     else{
-        $data = array("message" => "sorry! something went wrong..","result"=>"success");
+        $data = Array("message" => "sorry! something went wrong..","result"=>"success");
         echo json_encode($data);
     }
 
