@@ -9,7 +9,7 @@ $query="select user_id,username,email,fellowship_place,number from users where e
 $result = pg_query($query);
 $row = pg_fetch_assoc($result);
 if($row){
-    $data = Array("login" => true,"username"=>$row["username"],"email"=>$row["email"],"place"=>$row["fellowship_place"],"user_id"=>$row["user_id"],"contact"=>$row["number"]);
+    $data = Array("login" => true,"username"=>$row["username"],"email"=>$row["email"],"place"=>$row["fellowship_place"],"user_id"=>$row["user_id"],"contact"=>$row["number"],"photo"=>$row['image']);
     echo json_encode($data);
 }
 else
