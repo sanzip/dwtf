@@ -9,7 +9,7 @@ $queryR="select * from reports where user_id='$user_id'";
 if($row){
 		    // $data = Array("result"=>"success","message" => "success","title"=>$row["title"],"body"=>$row["body"],"date"=>$row["date"],"class_taught"=>$row["class_taught"],"hours_taught"=>$row["hours_taught"]);
       //   echo json_encode($data);
-  echo "yes"
+  echo "yes";
     }
     else{
         // $data = Array("message" => "sorry! something went wrong..","result"=>"success");
