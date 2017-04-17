@@ -28,14 +28,14 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    
    if($result)
    {
-    include ('send_email.php');
+    // include ('send_email.php');
 
-            $to=$email;
-            $subject="User Credentials";
-             $emailBody = 'Hello,'.$username.'<br/><br/> Your credentials are as follows:<br/><br/>'.
-        '<b>Username: </b>'. $email.'<br/><br/>' .
-                '<b>Password: </b>'. $password.'<br/><br/>' ;
-            sendEmail($to,$subject,$emailBody);   
+    //         $to=$email;
+    //         $subject="User Credentials";
+    //          $emailBody = 'Hello,'.$username.'<br/><br/> Your credentials are as follows:<br/><br/>'.
+    //     '<b>Username: </b>'. $email.'<br/><br/>' .
+    //             '<b>Password: </b>'. $password.'<br/><br/>' ;
+    //         sendEmail($to,$subject,$emailBody);   
    
    //echo "<br/> Image upload";
    echo "<script type='text/javascript'>

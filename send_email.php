@@ -13,7 +13,7 @@ $mail->Port = 465; // or 587
 $mail->IsHTML(true);
 
 $mail->Username = "sanzip.mainali@gmail.com"; 
-$mail->Password = "pendrive"; 
+$mail->Password = ""; 
 
 $mail->SetFrom("sanzip.mainali@gmail.com");
 $mail->Subject = $subject;
