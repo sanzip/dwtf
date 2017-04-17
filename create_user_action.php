@@ -12,7 +12,7 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    else{
 		
 		$photo=addslashes($_FILES['photo']['tmp_name']);
-      $userid=$_POST['userid'];
+  $userid=$_POST['userid'];
 	$username=$_POST['username'];
   $email=$_POST['email'];
   $password=$_POST['password'];

@@ -13,35 +13,28 @@
   session_start();
 if(!isset($_SESSION['login_user'])){
    header("location:index.php");
-   include_once("config.php");
  
 if(isset($_POST['update']))
 {    
-    $id = $_POST['id'];
-    
-    $name=$_POST['name'];
-    $age=$_POST['age'];
-    $email=$_POST['email'];    
-    
-    // checking empty fields
-    if(empty($name) || empty($age) || empty($email)) {            
-        if(empty($name)) {
-            echo "<font color='red'>Name field is empty.</font><br/>";
-        }
-        
-        if(empty($age)) {
-            echo "<font color='red'>Age field is empty.</font><br/>";
-        }
-        
-        if(empty($email)) {
-            echo "<font color='red'>Email field is empty.</font><br/>";
-        }        
-    } else {    
+   $photo=addslashes($_FILES['photo']['tmp_name']);
+  $userid=$_POST['userid'];
+  $username=$_POST['username'];
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+  $batch=$_POST['batch'];
+  $number=$_POST['number'];
+  $fellowship_place=$_POST['fplace'];
+  $photo=file_get_contents($photo);
+  $photo=base64_encode($photo);
+  $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn password=a31fe85afd8c39ebb35d8467850f370272dfa359256d6b668d0a92754bb1280e");
+  $qry="UPDATE  users SET user_id='$userid',username='$username',email='$email',batch='$batch',fellowship_place='$fellowship_place',number='$number',image='$photo',";
+  //$qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo')";
+   $result=pg_query($qry);   
         //updating the table
-        $result = mysqli_query($mysqli, "UPDATE users SET name='$name',age='$age',email='$email' WHERE id=$id");
+        //$result = mysqli_query($mysqli, "UPDATE users SET name='$name',age='$age',email='$email' WHERE id=$id");
         
         //redirectig to the display page. In our case, it is index.php
-        header("Location: index.php");
+        header("Location: manageuser.php");
     }
 }
 ?>
@@ -50,13 +43,20 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
  
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
+$result = pg_query("SELECT * FROM users WHERE user_id=$id");
  
 while($res = mysqli_fetch_array($result))
 {
-    $name = $res['name'];
-    $age = $res['age'];
-    $email = $res['email'];
+    $photo=addslashes($_FILES['photo']['tmp_name']);
+  $userid=$_POST['userid'];
+  $username=$_POST['username'];
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+  $batch=$_POST['batch'];
+  $number=$_POST['number'];
+  $fellowship_place=$_POST['fplace'];
+  $photo=file_get_contents($photo);
+  $photo=base64_encode($photo);
 }
 ?>
 }
@@ -100,29 +100,30 @@ while($res = mysqli_fetch_array($result))
            
                     <fieldset>
                        <div class="form-group">
-                  <input class="form-control" placeholder="UserId" name="userid" type="text" >
+                  <input class="form-control" placeholder="UserId" name="userid" type="text" value="<?php echo $row['user_id']; ?>">
               </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="E-mail" name="email" type="text" required>
+                  <input class="form-control" placeholder="E-mail" name="email" type="text" required value="<?php echo $row['email']; ?>">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Password" name="password" type="password" required value="">
+                <input class="form-control" placeholder="Password" name="password" type="password" required value="<?php echo $row['password']; ?>">
               </div>
                <div class="form-group">
-                  <input class="form-control" placeholder="Username" name="username" type="text" required>
+                  <input class="form-control" placeholder="Username" name="username" type="text" required value="<?php echo $row['username']; ?>">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Batch" name="batch" type="text" value="" required>
+                <input class="form-control" placeholder="Batch" name="batch" type="text" value="" required value="<?php echo $row['batch']; ?>"> 
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="">
+                <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="<?php echo $row['number']; ?>">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="">
+                <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="<?php echo $row['fellowship_place']; ?>">
               </div>
               <div class="form-group">
                 
-                 <input placeholder="Photo" type="file" name="photo" class="form-control" required>
+                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']). ' "   />';?></td>;
+         ">
                    </div>
 				   <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
               <input class="btn btn-success btn-block" name="update" type="submit" value="Update">
