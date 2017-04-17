@@ -106,7 +106,7 @@ if(!isset($_SESSION['login_user'])){
           <td><?php echo $row['batch']; ?></td> 
           <td><?php echo $row['number']; ?></td> 
            <td><?php echo $row['fellowship_place']; ?></td> 
-          <td><button onclick="postBanner(<?php echo $row['banner_id']; ?>);" class="btn btn-success">Edit</button><button name="bpost" onclick="deleteUser(<?php echo $row['user_id']; ?>);" class="btn btn-danger">Delete</button></td> 
+          <td><a href="edit.php?id=<?php echo $row['user_id']; ?>"  class="btn btn-success">Edit</a><button name="bpost" onclick="deleteUser(<?php echo $row['user_id']; ?>);" class="btn btn-danger">Delete</button></td> 
           </tr>
           <?php
 }
