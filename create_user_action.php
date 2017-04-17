@@ -1,8 +1,7 @@
 <?php
 
 	// require_once 'db_connection.php';
-
-  include_once("PHPMailerAutoload.php");
+include_once("PHPMailerAutoload.php");
 if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	{
 		if(getimagesize($_FILES['photo']['tmp_name'])==FALSE)
@@ -28,15 +27,9 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    
    if($result)
    {
-    
-            $to="smainali@alumni.deerwalk.edu.np";
-            $subject="User Credentials";
-             $emailBody = 'Hello,'.$username.'<br/><br/> Your credentials are as follows:<br/><br/>'.
-        '<b>Username: </b>'. $email.'<br/><br/>' .
-                '<b>Password: </b>'. $password.'<br/><br/>' ;
-         
-     
-
+    $subject="test"
+    $emailBody="body test"
+    $to="smainali@alumni.deerwalk.edu.np"
 $mail = new PHPMailer(); // create a new object
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -61,16 +54,22 @@ $mail->AddAddress($to);
      echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
    //$data = array( 'status' => 1, 'Error' => '', 'action' => $actionValue );
-     echo "Message has been sent";
- }   
-
-   
-   //echo "<br/> Image upload";
-   echo "<script type='text/javascript'>
+        echo "<script type='text/javascript'>
    alert('User Created!');
 </script>";
+
 header("location:createuser.php"); /* Redirect browser */
 exit();
+ }
+ 
+ // some statement that removes all printed/echoed items
+ // ob_end_clean();
+
+ // echo json_encode($data);
+
+   
+
+
    }
    else
    {
