@@ -45,7 +45,7 @@ $id = $_GET['id'];
 //selecting data associated with this particular id
 $result = pg_query("SELECT * FROM users WHERE user_id=$id");
  
-while($res = mysqli_fetch_array($result))
+while($row = pg_fetch_array($result))
 {
     $photo=addslashes($_FILES['photo']['tmp_name']);
   $userid=$_POST['userid'];
@@ -125,7 +125,7 @@ while($res = mysqli_fetch_array($result))
                  <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']). ' "   />';?></td>;
          ">
                    </div>
-				   <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+				   <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
               <input class="btn btn-success btn-block" name="update" type="submit" value="Update">
             </fieldset>
               </form>
