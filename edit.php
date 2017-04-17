@@ -13,7 +13,7 @@
   session_start();
 if(!isset($_SESSION['login_user'])){
    header("location:index.php");
- 
+ }
 if(isset($_POST['update']))
 {    
    $photo=addslashes($_FILES['photo']['tmp_name']);
@@ -27,7 +27,7 @@ if(isset($_POST['update']))
   $photo=file_get_contents($photo);
   $photo=base64_encode($photo);
   $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn password=a31fe85afd8c39ebb35d8467850f370272dfa359256d6b668d0a92754bb1280e");
-  $qry="UPDATE  users SET user_id='$userid',username='$username',email='$email',batch='$batch',fellowship_place='$fellowship_place',number='$number',image='$photo',";
+  $qry="UPDATE  users SET username='$username',email='$email',batch='$batch',fellowship_place='$fellowship_place',number='$number',image='$photo' where user_id='$userid'";
   //$qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo')";
    $result=pg_query($qry);   
         //updating the table
@@ -36,7 +36,7 @@ if(isset($_POST['update']))
         //redirectig to the display page. In our case, it is index.php
         header("Location: manageuser.php");
     }
-}
+
 ?>
 <?php
 //getting id from url
