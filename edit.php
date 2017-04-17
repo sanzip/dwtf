@@ -16,11 +16,7 @@ if(!isset($_SESSION['login_user'])){
  }
 if(isset($_POST['update']))
 {    
-   $photo=addslashes($_FILES['photo']['tmp_name']);
-   $fp      = fopen($photo, 'r');
-  $data = fread($fp, filesize($photo));
-      $data = addslashes($data);
-      fclose($fp);
+   // $photo=addslashes($_FILES['photo']['tmp_name']);
   $userid=$_POST['userid'];
   $username=$_POST['username'];
   $email=$_POST['email'];
@@ -124,10 +120,10 @@ while($row = pg_fetch_array($result))
               <div class="form-group">
                 <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="<?php echo $fellowship_place; ?>">
               </div>
-              <div class="form-group">
+             <!--  <div class="form-group">
              
-                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo $photo;?>">
-                   </div>
+                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php  $photo;?>">
+                   </div> -->
 				   <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
               <input class="btn btn-success btn-block" name="update" type="submit" value="Update">
             </fieldset>
