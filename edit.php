@@ -49,14 +49,14 @@ $result = pg_query("SELECT * FROM users WHERE user_id=$id");
  
 while($row = pg_fetch_array($result))
 {
-    $photo=$row['image'];
-  $userid=$row['userid'];
+  $photo=$row['image'];
+  $userid=$row['user_id'];
   $username=$row['username'];
   $email=$row['email'];
   $password=$row['password'];
   $batch=$row['batch'];
   $number=$row['number'];
-  $fellowship_place=$row['fplace'];
+  $fellowship_place=$row['fellowship_place'];
 }
 ?>
 }
