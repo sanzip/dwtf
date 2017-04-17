@@ -27,9 +27,9 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    
    if($result)
    {
-    $subject="test"
-    $emailBody="body test"
-    $to="smainali@alumni.deerwalk.edu.np"
+    $subject="test";
+    $emailBody="body test";
+    $to="smainali@alumni.deerwalk.edu.np";
 $mail = new PHPMailer(); // create a new object
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
