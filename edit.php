@@ -122,7 +122,7 @@ while($row = pg_fetch_array($result))
               </div>
               <div class="form-group">
               <div class=image>  <?php echo '<img src="data:image/jpeg;base64,' . $photo. ' "   />';?>"</div>
-                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo $photo;">
+                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo $photo;?>">
                    </div>
 				   <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
               <input class="btn btn-success btn-block" name="update" type="submit" value="Update">
