@@ -17,6 +17,10 @@ if(!isset($_SESSION['login_user'])){
 if(isset($_POST['update']))
 {    
    $photo=addslashes($_FILES['photo']['tmp_name']);
+   $fp      = fopen($photo, 'r');
+  $data = fread($fp, filesize($photo));
+      $data = addslashes($data);
+      fclose($fp);
   $userid=$_POST['userid'];
   $username=$_POST['username'];
   $email=$_POST['email'];
@@ -27,7 +31,7 @@ if(isset($_POST['update']))
   $photo=file_get_contents($photo);
   $photo=base64_encode($photo);
   $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn password=a31fe85afd8c39ebb35d8467850f370272dfa359256d6b668d0a92754bb1280e");
-  $qry="UPDATE  users SET username='$username',email='$email',batch='$batch',fellowship_place='$fellowship_place',number='$number',image='$photo' where user_id='$userid'";
+  $qry="UPDATE  users SET username='$username',email='$email',batch='$batch',fellowship_place='$fellowship_place',number='$number',image='$data' where user_id='$userid'";
   //$qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo')";
    $result=pg_query($qry);   
         //updating the table
@@ -49,7 +53,7 @@ $result = pg_query("SELECT * FROM users WHERE user_id=$id");
  
 while($row = pg_fetch_array($result))
 {
-  $photo=pg_unescape_bytea($row['image']);
+  $photo=$row['image']);
   $userid=$row['user_id'];
   $username=$row['username'];
   $email=$row['email'];
@@ -121,7 +125,7 @@ while($row = pg_fetch_array($result))
                 <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="<?php echo $fellowship_place; ?>">
               </div>
               <div class="form-group">
-              <div class=image>  <?php echo '<img src="data:image/jpeg;base64,' . $photo. ' "   />';?>"</div>
+             
                  <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo $photo;?>">
                    </div>
 				   <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
