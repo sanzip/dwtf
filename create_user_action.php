@@ -29,23 +29,6 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    if($result)
    {
     
-
-   
-   //echo "<br/> Image upload";
-   echo "<script type='text/javascript'>
-   alert('User Created!');
-</script>";
-header("location:createuser.php"); /* Redirect browser */
-exit();
-   }
-   else
-   {
-   "<script type='text/javascript'>
-   alert('Error in Creating User');
-</script>";
-//header("location:createuser.php"); /* Redirect browser */
-   }
-
             $to=$email;
             $subject="User Credentials";
              $emailBody = 'Hello,'.$username.'<br/><br/> Your credentials are as follows:<br/><br/>'.
@@ -80,6 +63,23 @@ $mail->AddAddress($to);
    //$data = array( 'status' => 1, 'Error' => '', 'action' => $actionValue );
      echo "Message has been sent";
  }   
+
+   
+   //echo "<br/> Image upload";
+   echo "<script type='text/javascript'>
+   alert('User Created!');
+</script>";
+header("location:createuser.php"); /* Redirect browser */
+exit();
+   }
+   else
+   {
+   "<script type='text/javascript'>
+   alert('Error in Creating User');
+</script>";
+//header("location:createuser.php"); /* Redirect browser */
+   }
+
    }
 pg_close($conn);
 		}
