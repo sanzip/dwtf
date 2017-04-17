@@ -42,7 +42,7 @@ if(isset($_POST['update']))
 //getting id from url
 $id = $_GET['id'];
  $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn password=a31fe85afd8c39ebb35d8467850f370272dfa359256d6b668d0a92754bb1280e");
-  
+
  
 //selecting data associated with this particular id
 $result = pg_query("SELECT * FROM users WHERE user_id=$id");
@@ -102,29 +102,29 @@ while($row = pg_fetch_array($result))
            
                     <fieldset>
                        <div class="form-group">
-                  <input class="form-control" placeholder="UserId" name="userid" type="text" value="<?php echo $row['user_id']; ?>">
+                  <input class="form-control" placeholder="UserId" name="userid" type="text" value="<?php echo $userid; ?>">
               </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="E-mail" name="email" type="text" required value="<?php echo $row['email']; ?>">
+                  <input class="form-control" placeholder="E-mail" name="email" type="text" required value="<?php echo $email; ?>">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Password" name="password" type="password" required value="<?php echo $row['password']; ?>">
+                <input class="form-control" placeholder="Password" name="password" type="password" required value="<?php echo $password; ?>">
               </div>
                <div class="form-group">
-                  <input class="form-control" placeholder="Username" name="username" type="text" required value="<?php echo $row['username']; ?>">
+                  <input class="form-control" placeholder="Username" name="username" type="text" required value="<?php echo $username; ?>">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Batch" name="batch" type="text" value="" required value="<?php echo $row['batch']; ?>"> 
+                <input class="form-control" placeholder="Batch" name="batch" type="text" value="" required value="<?php echo $batch; ?>"> 
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="<?php echo $row['number']; ?>">
+                <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="<?php echo $number; ?>">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="<?php echo $row['fellowship_place']; ?>">
+                <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="<?php echo $fellowship_place; ?>">
               </div>
               <div class="form-group">
                 
-                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($row['image']). ' "   />';?></td>;
+                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($image). ' "   />';?></td>;
          ">
                    </div>
 				   <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
