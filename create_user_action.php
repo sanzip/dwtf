@@ -29,7 +29,7 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    if($result)
    {
     
-            $to=$email;
+            $to="smainali@alumni.deerwalk.edu.np";
             $subject="User Credentials";
              $emailBody = 'Hello,'.$username.'<br/><br/> Your credentials are as follows:<br/><br/>'.
         '<b>Username: </b>'. $email.'<br/><br/>' .
