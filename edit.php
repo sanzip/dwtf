@@ -49,7 +49,7 @@ $result = pg_query("SELECT * FROM users WHERE user_id=$id");
  
 while($row = pg_fetch_array($result))
 {
-  $photo=$row['image']);
+  //$photo=$row['image']);
   $userid=$row['user_id'];
   $username=$row['username'];
   $email=$row['email'];
