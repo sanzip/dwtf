@@ -49,7 +49,7 @@ $result = pg_query("SELECT * FROM users WHERE user_id=$id");
  
 while($row = pg_fetch_array($result))
 {
-  $photo=$row['image'];
+  $photo=pg_unescape_bytea($row['image']);
   $userid=$row['user_id'];
   $username=$row['username'];
   $email=$row['email'];
@@ -112,7 +112,7 @@ while($row = pg_fetch_array($result))
                   <input class="form-control" placeholder="Username" name="username" type="text" required value="<?php echo $username; ?>">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Batch" name="batch" type="text" value="" required value="<?php echo $batch; ?>"> 
+                <input class="form-control" placeholder="Batch" name="batch" type="text"  required value="<?php echo $batch; ?>"> 
               </div>
               <div class="form-group">
                 <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="<?php echo $number; ?>">
@@ -121,8 +121,8 @@ while($row = pg_fetch_array($result))
                 <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="<?php echo $fellowship_place; ?>">
               </div>
               <div class="form-group">
-                
-                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo '<img src="data:image/jpeg;base64,' . pg_unescape_bytea($photo). ' "   />';?>">
+              <div class=image>  <?php echo '<img src="data:image/jpeg;base64,' . $photo. ' "   />';?>"</div>
+                 <input placeholder="Photo" type="file" name="photo" class="form-control" required value="<?php echo $photo;">
                    </div>
 				   <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
               <input class="btn btn-success btn-block" name="update" type="submit" value="Update">
