@@ -2,7 +2,7 @@
 
 	// require_once 'db_connection.php';
 
-
+  include_once("PHPMailerAutoload.php");
 if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	{
 		if(getimagesize($_FILES['photo']['tmp_name'])==FALSE)
@@ -28,14 +28,8 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
    
    if($result)
    {
-    // include ('send_email.php');
+    
 
-    //         $to=$email;
-    //         $subject="User Credentials";
-    //          $emailBody = 'Hello,'.$username.'<br/><br/> Your credentials are as follows:<br/><br/>'.
-    //     '<b>Username: </b>'. $email.'<br/><br/>' .
-    //             '<b>Password: </b>'. $password.'<br/><br/>' ;
-    //         sendEmail($to,$subject,$emailBody);   
    
    //echo "<br/> Image upload";
    echo "<script type='text/javascript'>
@@ -51,6 +45,41 @@ exit();
 </script>";
 //header("location:createuser.php"); /* Redirect browser */
    }
+
+            $to=$email;
+            $subject="User Credentials";
+             $emailBody = 'Hello,'.$username.'<br/><br/> Your credentials are as follows:<br/><br/>'.
+        '<b>Username: </b>'. $email.'<br/><br/>' .
+                '<b>Password: </b>'. $password.'<br/><br/>' ;
+         
+     
+
+$mail = new PHPMailer(); // create a new object
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+$mail->SMTPAuth = true; // authentication enabled
+$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465; // or 587
+$mail->IsHTML(true);
+
+$mail->Username = "sanzip.mainali@gmail.com"; 
+$mail->Password = "pendrive"; 
+
+$mail->SetFrom("sanzip.mainali@gmail.com");
+$mail->Subject = $subject;
+$mail->Body = $emailBody;
+$mail->AddAddress($to);
+
+//header('Content-Type: application/json');
+
+ if(!$mail->Send()) {
+   //$data = array( 'status' => -1, 'Error' => $mail->ErrorInfo );
+     echo "Mailer Error: " . $mail->ErrorInfo;
+ } else {
+   //$data = array( 'status' => 1, 'Error' => '', 'action' => $actionValue );
+     echo "Message has been sent";
+ }   
    }
 pg_close($conn);
 		}
