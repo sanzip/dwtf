@@ -45,6 +45,7 @@
 </head>
 <body>
  <?php
+ require_once 'db_connection.php';
   session_start();
 if(!isset($_SESSION['login_user'])){
    header("location:index.php");
@@ -72,10 +73,36 @@ if(!isset($_SESSION['login_user'])){
 <br>
 <br>
 <br>
- <br>
+<br>
 <br>
 <div class="container">
     <div class="row">
+      <div class="col-md-12">
+
+        <form action="report_generator.php"  method="post">
+          <div class="col-md-3">
+       <div class="form-group">
+        <input class="form-control" placeholder="UserId" name="userid" type="text" required>
+        </div>
+         </div>
+          <div class="col-md-3">
+       <div class="form-group">
+        <input class="form-control" placeholder="start Date" name="sdate" type="date" required>
+        </div>
+         </div>
+         <div class="col-md-3">
+         <div class="form-group">
+        <input class="form-control" placeholder="End Date" name="edate" type="date" required>
+        </div>
+         </div>
+           <div class="col-md-3">
+        <input class="btn btn-success btn-block" name="btn_generate" type="submit" value="Generate Report">
+     </div>
+      <form>
+      </div>
+
+
+
         <?php
         require('db_connection.php');
       $sql = "SELECT * from reports a inner join users b  on a.user_id=b.user_id ORDER BY date DESC ";
@@ -107,7 +134,7 @@ if(!isset($_SESSION['login_user'])){
 
                 </div> -->
                       <div class="avatar">
-                      <?php echo '<img src="data:image/jpeg;base64,'. pg_unescape_bytea($data[$i]['image']). ' " />';?> 
+                      <?php echo '<img src="data:image/jpeg;base64,'.pg_unescape_bytea($data[$i]['image']). ' " />';?> 
                         <!-- <img src="http://placehold.it/200x100" alt="..."> -->
                    </div>
                  </div>
