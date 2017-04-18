@@ -63,16 +63,19 @@ if(!isset($_SESSION['login_user'])){
                 <input class="form-control" placeholder="Password" name="password" type="password" required value="">
               </div>
                <div class="form-group">
-                  <input class="form-control" placeholder="Username" name="username" type="text" required>
+                  <input class="form-control" placeholder="Full Name" name="username" type="text" required>
               </div>
               <div class="form-group">
                 <input class="form-control" placeholder="Batch" name="batch" type="text" value="" required>
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="">
+                <input class="form-control" placeholder="Fellowship Contact Number" name="number" type="tel" required value="">
               </div>
               <div class="form-group">
                 <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="">
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="School Name" name="sname" type="text" required value="">
               </div>
               <div class="form-group">
                 
