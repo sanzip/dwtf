@@ -24,6 +24,7 @@ if(isset($_POST['update']))
   $batch=$_POST['batch'];
   $number=$_POST['number'];
   $fellowship_place=$_POST['fplace'];
+  $school_name=$_POST['sname'];
   $photo=file_get_contents($photo);
   $photo=base64_encode($photo);
   $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn password=a31fe85afd8c39ebb35d8467850f370272dfa359256d6b668d0a92754bb1280e");
@@ -55,6 +56,7 @@ while($row = pg_fetch_array($result))
   $password=$row['password'];
   $batch=$row['batch'];
   $number=$row['number'];
+   $school_name=$row['school_name'];
   $fellowship_place=$row['fellowship_place'];
 }
 ?>
@@ -108,16 +110,19 @@ while($row = pg_fetch_array($result))
                 <input class="form-control" placeholder="Password" name="password" type="password" required value="<?php echo $password; ?>">
               </div>
                <div class="form-group">
-                  <input class="form-control" placeholder="Username" name="username" type="text" required value="<?php echo $username; ?>">
+                  <input class="form-control" placeholder="Full Name" name="username" type="text" required value="<?php echo $username; ?>">
               </div>
               <div class="form-group">
                 <input class="form-control" placeholder="Batch" name="batch" type="text"  required value="<?php echo $batch; ?>"> 
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Contact Number" name="number" type="tel" required value="<?php echo $number; ?>">
+                <input class="form-control" placeholder="Fellowship Contact Number" name="number" type="tel" required value="<?php echo $number; ?>">
               </div>
               <div class="form-group">
                 <input class="form-control" placeholder="Fellowship Place" name="fplace" type="tel" required value="<?php echo $fellowship_place; ?>">
+              </div>
+               <div class="form-group">
+                <input class="form-control" placeholder="School Name" name="sname" type="text" required value="<?php echo $school_name; ?>">
               </div>
               <div class="form-group">
              
