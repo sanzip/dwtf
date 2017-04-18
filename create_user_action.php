@@ -1,7 +1,7 @@
 <?php
 
 	// require_once 'db_connection.php';
-include_once("PHPMailerAutoload.php");
+//include_once("PHPMailerAutoload.php");
 if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	{
 		if(getimagesize($_FILES['photo']['tmp_name'])==FALSE)
@@ -22,7 +22,7 @@ if(isset($_POST['btn_create']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	$photo=file_get_contents($photo);
 	$photo=base64_encode($photo);
   $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn password=a31fe85afd8c39ebb35d8467850f370272dfa359256d6b668d0a92754bb1280e");
-  $qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$school_name','$photo')";
+  $qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo','$school_name')";
   //$qry="insert into users values('$userid','$username','$password','$email','$fellowship_place','$batch','$number','$photo')";
    $result=pg_query($qry);
    
