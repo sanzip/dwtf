@@ -115,9 +115,7 @@ if(!isset($_SESSION['login_user'])){
             $data[$i]['report_id'] = $res["report_id"];
             $data[$i]['user_id'] = $res["user_id"];
             $data[$i]['username'] = $res["username"];
-            $data[$i]['title'] = $res["title"];
              $data[$i]['body'] = $res["body"];
-              $data[$i]['class_taught']=$res["class_taught"];
                $data[$i]['hours_taught']=$res["hours_taught"];
                 $data[$i]['date']=$res["date"];
               $data[$i]['image']=$res["image"];

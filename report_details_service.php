@@ -5,7 +5,7 @@ $queryR="select * from reports where user_id='$user_id'";
 $resultC = pg_query($queryR);
 $row = pg_fetch_assoc($resultC);
 if($row){
-    $data = Array("result"=>"success","message" => "success","title"=>$row["title"],"body"=>$row["body"],"date"=>$row["date"],"class_taught"=>$row["class_taught"],"hours_taught"=>$row["hours_taught"]);
+    $data = Array("result"=>"success","message" => "success","body"=>$row["body"],"date"=>$row["date"],"hours_taught"=>$row["hours_taught"]);
     echo json_encode($data);
 }
 else{

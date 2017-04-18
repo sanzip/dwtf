@@ -112,9 +112,9 @@ $pdf->AddPage();
              $reportid = $res["report_id"];
             $user_id = $res["user_id"];
             $username= $res["username"];
-            $title = $res["title"];
+            
              $body = $res["body"];
-              $class_taught=$res["class_taught"];
+             
                $hours_taught=$res["hours_taught"];
                 $date=$res["date"];
               $image= pg_unescape_bytea($res["image"]);
