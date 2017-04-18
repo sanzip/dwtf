@@ -117,11 +117,11 @@ $pdf->AddPage();
               $class_taught=$res["class_taught"];
                $hours_taught=$res["hours_taught"];
                 $date=$res["date"];
-              $image=$res["image"];
+              $image= pg_unescape_bytea($res["image"]);
          
               $html = <<<EOD
               <div style="text-align:center">
-		<img  width="100" height="100" src="data:image/jpeg;base64,'. pg_unescape_bytea($image) . ' " />
+		<img  width="100" height="100" src="data:image/jpeg;base64,'.$image . ' " />
 		</div>
         <h3 style="text-align:center"><u>Date:$date</u></h3>
         <h5 style="text-align:center"><u>Hours Taught:$hours_taught</u></h5>
