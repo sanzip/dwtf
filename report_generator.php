@@ -1,12 +1,13 @@
 <?php
-require_once('db_connection.php');
+
 if(isset($_POST['btn_generate']) && ($_SERVER['REQUEST_METHOD']== "POST"))
 	{
 		$userid= $_POST['userid'];
 		$from_date= $_POST['sdate'];
   		$to_date= $_POST['edate'];
+       $conn = pg_connect("host=ec2-54-197-232-155.compute-1.amazonaws.com dbname=d2nip5a2dq6nrd user=qehavbestclndn password=a31fe85afd8c39ebb35d8467850f370272dfa359256d6b668d0a92754bb1280e");
   		$sql = "SELECT * from reports a inner join users b  on a.user_id=b.user_id WHERE a.date BETWEEN '$from_date' AND '$to_date' AND a.user_id='$userid'";
-      $result =pg_query($conn, $sql) ;
+      $result =pg_query($sql) ;
        if (pg_num_rows($result) > 0){
        
       
