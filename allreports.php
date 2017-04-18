@@ -139,7 +139,7 @@ if(!isset($_SESSION['login_user'])){
                     </a>
                     <div class="media-body">
                       <a  href="reportdetail.php?id='<?php echo  $data[$i]['report_id']?>'">
-                        <h4 class="media-heading"><?php echo  $data[$i]['report_id']?></h4>
+                        <h4 class="media-heading"><?php echo "DWTF REPORT". $data[$i]['report_id']?></h4>
                       </a >
                         <p class="author"><?php echo  $data[$i]['username']?></p>
                         <p class="author"><?php echo  $data[$i]['date']?></p>
