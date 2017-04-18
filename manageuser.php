@@ -83,6 +83,7 @@ if(!isset($_SESSION['login_user'])){
 <th>Batch</th>
 <th>Contact</th>
 <th>Fellowship place</th>
+<th>School Name</th>
 <th>Action</th>
 </tr>
 </thead>
@@ -106,6 +107,7 @@ if(!isset($_SESSION['login_user'])){
           <td><?php echo $row['batch']; ?></td> 
           <td><?php echo $row['number']; ?></td> 
            <td><?php echo $row['fellowship_place']; ?></td> 
+            <td><?php echo $row['school_name']; ?></td> 
           <td><a href="edit.php?id=<?php echo $row['user_id']; ?>"  class="btn btn-success">Edit</a><button name="bpost" onclick="deleteUser(<?php echo $row['user_id']; ?>);" class="btn btn-danger">Delete</button></td> 
           </tr>
           <?php
