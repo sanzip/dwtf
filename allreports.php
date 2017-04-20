@@ -82,7 +82,24 @@ if(!isset($_SESSION['login_user'])){
         <form action="report_generator.php"  method="post">
           <div class="col-md-3">
        <div class="form-group">
-        <input class="form-control" placeholder="UserId" name="userid" type="text" required>
+        <select class="form-control" name="userid">
+          <option value=""></option>
+        <option value="230">Sanjeev Mainali</option>
+        <option value="218">Kundan Rana</option>
+        <option value="mercedes">Surya raj Timsina</option>
+        <option value="231">Anish Thakuri</option>
+        <option value="238">Sujan Chauhan</option>
+        <option value="223">Pankaj KC</option>
+        <option value="202">Anil Parajuli</option>
+        <option value="214">Arun Tamang</option>
+        <option value="226">Anju Shahi</option>
+        <option value="205">Sagar Giri</option>
+        <option value="222">Asmita Bista</option>
+        <option value="229">Anil Lama</option>
+        <option value="236">Prajwal Sthapit</option>
+         <option value="204">Bidish Acharya</option>
+        </select>
+        <!-- <input class="form-control" placeholder="UserId" name="userid" type="text" required> -->
         </div>
          </div>
           <div class="col-md-3">
